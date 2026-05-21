@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Mensajes</title>
+    <!-- Usamos el mismo CSS para que mantenga el estilo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Administración</h1>
+        <nav>
+            <a href="index.html">Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Bandeja de Entrada</h2>
+            <p>Estos son los mensajes que llegaron a través del formulario de Formspree:</p>
+            
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Mensaje</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>juan@mail.com</td>
+                        <td>Consulta sobre stock</td>
+                        <td>Leído</td>
+                    </tr>
+                    <tr>
+                        <td>María García</td>
+                        <td>mgarcia@mail.com</td>
+                        <td>Problema con el envío</td>
+                        <td>Pendiente</td>
+                    </tr>
+                    <!-- Fila combinada con colspan para agrupar información -->
+                    <tr>
+                        <td colspan="3" style="text-align: center; background-color: #6fddaf;">
+                            <strong>Total de mensajes pendientes de respuesta:</strong>
+                        </td>
+                        <td style="text-align: center; color: red;">1</td>
+                    </tr>
+                    <!-- ... el resto de tus filas ... -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Área Privada</p>
+    </footer>
+</body>
+</html>

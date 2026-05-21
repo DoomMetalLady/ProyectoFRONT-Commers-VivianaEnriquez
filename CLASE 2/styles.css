@@ -1,0 +1,342 @@
+/* Selector de ELEMENTO (afecta a todos los body) */
+body {
+    font-family: "Finlandica Text", sans-serif; /* Cambia el tipo de letra */
+    margin: 0px; /* Elimina el margen por defecto */
+    padding: 10px; /* Agrega un poco de espacio interno */
+    background: linear-gradient(to right, #66ea6d, #43b1b9);/* Degradado de fondo */
+    color: rgb(15, 0, 0);
+    
+}
+
+/* Selector de ELEMENTO (afecta al header y footer) */
+header, footer {
+    background-color: #e4f5f785; /* Color de fondo claro/verde */
+    color: rgb(3, 66, 58); /* Color de texto oscuro */
+    padding: 20px; 
+    text-align: center; 
+}
+main p {
+font-family: "Intel One Mono", monospace;
+}
+h1, h2, h3 {
+    font-family: "Finlandica Text", sans-serif;
+    margin: 25px; 
+}
+
+/* Selector de CLASE */
+.cabecera-principal {
+    border-bottom: 5px solid #dd1c1c; /* Línea ROJO abajo */
+    margin-bottom: 45px; 
+}
+
+/* Estilo para los títulos */
+h1 {
+    font-size: 2.5rem; 
+    margin: 10px 0;
+
+}
+
+/* --- NUEVOS ESTILOS AGREGADOS --- */
+
+/* Selector de elemento para la lista: Quita las viñetas (puntitos) */
+ul {
+    list-style: none;
+    padding: 0; /* Quitamos el espacio que viene por defecto */
+    /* Agregamos esto para cumplir con la Barra de Navegación */
+    display: flex;                  /* Distribución horizontal */
+    justify-content: space-around;  /* Espacio equitativo entre ítems */
+    background-color: #e3ebee88;      /* Color de fondo para el menú */
+    margin: 0;
+}
+
+/* Selector de elemento para los enlaces: Quita subrayado y cambia color */
+a {
+    text-decoration: none; /* Chau subrayado */
+    color: #1a860c;        /* Un verde  para que combine con tu header */
+    font-weight: bold;     /* Para que se note que son links */
+    padding: 8px 16px;     /* Agregamos el padding  */
+}
+
+/* Opcional: Cambia el color cuando pasás el mouse */
+a:hover {
+    color: #1e3d14;
+}
+
+/* Selector de elemento para los íconos (si usás Font Awesome) */
+i {
+font-size: 24px;
+color: #333;
+}
+
+/* Espacio para el contenedor de las redes sociales */
+.redes-sociales {
+    margin-top: 15px; /* Separa los íconos del texto de derechos reservados */
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 25px; /* Deja una separación prolija entre cada ícono */
+}
+
+/* Estilo específico para los íconos dentro del footer */
+.redes-sociales a i {
+    font-size: 28px; /* Les damos un buen tamaño visible */
+    color: #29811d;  /* Usamos el verde que elegiste para tus links */
+    transition: transform 0.2s; /* Hace que el movimiento del hover sea suave */
+}
+
+/* Efecto cuando el usuario pasa el mouse por encima del ícono */
+.redes-sociales a i:hover {
+    color: #1e3d14; /* Se vuelve un verde más oscuro */
+    transform: scale(1.2); /* Se agranda un poquito (efecto visual clave) */
+}
+
+/* Contenedor general de las tarjetas */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;       /* Si no entran en la pantalla, bajan solas */
+    justify-content: center; /* Centra las tarjetas */
+    gap: 25px;              /* Separa las tarjetas entre sí  */
+    padding: 20px;
+}
+
+/* Estilo individual de cada Tarjeta (Modelo de Caja Completo) */
+.tarjeta-producto {
+    background-color: #ffffff;
+    border: 1px solid #196303; /* Usamos el verde clarito de tu header */
+    border-radius: 8px;        /* Bordes redondeados */
+    width: 280px;              /* Ancho fijo para cada tarjeta */
+    padding: 15px;             /* Espacio interno para que el texto no toque el borde */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Una sombrita sutil para dar relieve */
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinea los elementos adentro */
+}
+
+/* Estilo de la imagen del producto */
+.producto-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;         /* Recorta la imagen prolijamente para que no se deforme */
+    border-radius: 4px;
+}
+
+/* Nombre del producto (hereda Finlandica Text automáticamente por tu regla anterior) */
+.producto-nombre {
+    font-size: 1.3rem;
+    color: #1e3d14;
+    margin: 10px 0 5px 0;
+}
+
+/* Descripción breve (hereda Intel One Mono automáticamente por tu regla anterior) */
+.producto-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Precio destacado */
+.producto-precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dd1c1c;             /* Rojo para que llame la atención */
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Botón de Agregar al Carrito */
+.btn-carrito {
+    background-color: #23b90f; /* El verde de  links */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;           /* Cambia el cursor a la manito */
+    transition: background-color 0.2s;
+}
+
+/* Hover del botón */
+.btn-carrito:hover {
+    background-color: #1e3d14; /* Se vuelve más oscuro al pasar el mouse */
+}
+/* ====================================================
+   SECCIÓN RESEÑAS (Aplicando CSS Grid y Estilos Completos)
+   ==================================================== */
+
+/* Contenedor principal de la sección */
+.reseñas {
+    display: grid; /* 1. Usamos display: grid (Pedido) */
+    
+    /* Columnas responsivas que se adaptan solas al tamaño de pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    
+    gap: 20px;       /* 3. Usamos gap para separar las tarjetas (Pedido) */
+    padding: 40px 20px; /* 4. Añadimos padding para que no pegue a los bordes (Pedido) */
+    background-color: #f9f9f9; /* Un fondo gris clarito para diferenciarlo */
+    text-align: center; /* Centra el texto dentro de cada tarjeta */
+}
+
+/* El contenedor PADRE que activa el Grid */
+
+.grid-container {
+    display: grid; 
+    /*crea columnas  automáticamente según el espacio, con un mínimo de 280px por tarjeta*/
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+/* Estilo de cada tarjeta individual */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0; /* 1. Bordes suaves (Pedido) */
+    border-radius: 10px;
+    padding: 25px;            /* 2. Padding interno (Pedido) */
+    
+    /* Sombra (box-shadow) para destacar visualmente (Pedido) */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+    
+    text-align: center;
+    
+    /* Transición suave para que el movimiento no sea brusco (Pedido) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* ====================================================
+   Uso de :nth-child()
+   ==================================================== */
+
+/* Seleccionamos específicamente la SEGUNDA tarjeta */
+.card:nth-child(2) {
+    border: 2px solid #23b90f; /* Le ponemos el borde con el verde de tu marca */
+    background-color: #f4fbf2; /* Un fondo verde extremadamente sutil para destacar */
+}
+
+/* Cambiamos el color del ícono de la tarjeta del medio para que combine */
+.card:nth-child(2) i {
+    color: #1e3d14; 
+}
+
+/* Efecto hover opcional para que se mueva */
+.card:hover {
+    transform: translateY(-8px); /* La tarjeta sube levemente */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* La sombra se intensifica al subir */
+}
+
+/* Estilos para el contenido de la reseña */
+.card i {
+    font-size: 40px;
+    color: #23b90f; /* El verde de tus íconos */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 5px 0;
+    color: #1e3d14;
+    font-size: 1.2rem;
+}
+
+/* La opinión usa la fuente Intel One Mono por la regla general de párrafos */
+.card .opinion {
+    font-style: italic;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.card .estrellas {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* ====================================================
+   ESTILOS BASE DEL FORMULARIO (Para Computadoras)
+   ==================================================== */
+.contacto {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    max-width: 600px;         /* En compu no queremos que sea gigante, lo limitamos */
+    margin: 30px auto;        /* Lo centra horizontalmente */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.grupo-formulario {
+    margin-bottom: 20px;      /* Separación base entre campos */
+    text-align: left;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1e3d14;
+}
+
+/* Estilos para los campos de texto */
+.grupo-formulario input, 
+.grupo-formulario textarea {
+    width: 100%;             /* Ya ocupan el ancho de su contenedor */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;     /* Hereda la tipografía general */
+    
+    /* EXTRA: Transición suave para cuando cambia el borde al hacer foco */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* EXTRA : Efecto :focus al hacer clic para escribir */
+.grupo-formulario input:focus, 
+.grupo-formulario textarea:focus {
+    outline: none;            /* Saca el borde azul feo que viene por defecto */
+    border-color: #23b90f;    /* Cambia al verde de tu marca */
+    box-shadow: 0 0 8px rgba(35, 185, 15, 0.3); /* Le da un luminoso verde suave */
+}
+
+.btn-enviar {
+    background-color: #23b90f;
+    margin-bottom: 25px;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;             /* Botón grande fácil de tocar */
+}
+
+.btn-enviar:hover {
+    background-color: #1e3d14;
+}
+
+
+/* ====================================================
+   OBLIGATORIO: MEDIA QUERIES (Pantallas menores a 768px)
+   ==================================================== */
+@media (max-width: 768px) {
+    
+    /* 1. Adaptar la sección de reseñas a una sola columna */
+    .grid-container {
+        /* Pisamos el repeat anterior y obligamos a que sea 1 sola columna */
+        grid-template-columns: 1fr; 
+        gap: 15px;            /* Achicamos un pelín el espacio entre tarjetas */
+    }
+
+    /* 2. Ajustar el padding general del formulario en celulares */
+    .contacto {
+        padding: 20px 15px;   /* Menos padding para aprovechar el espacio del celu */
+        margin: 15px;         /* Margen externo chico para que no toque los bordes del celu */
+    }
+
+    /* 3. Asegurar que los campos aprovechen todo el ancho del celular */
+    .grupo-formulario input, 
+    .grupo-formulario textarea {
+        padding: 12px 10px;   /* Inputs un poco más altos para que sea fácil meter el dedo */
+        margin-bottom: 5px;   /* Margen extra inferior si se requiere */
+    }
+}

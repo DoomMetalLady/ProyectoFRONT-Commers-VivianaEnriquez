@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Supermercado</title>
+
+<!-- LINK a fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finlandica+Text:ital,wght@0,100..900;1,100..900&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <!-- LINK AL CSS NUEVO -->
+    <link rel="stylesheet" href="styles.css">
+        <!-- LINK AL icono -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+</head>
+<body>
+    <header>
+        <img src="LOGO.png" alt="Logo" width="450px" height="280">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios/Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Bienvenidos a nuestra página web</h1>
+        <p>En esta página encontrarás información sobre nuestros productos y servicios.</p>
+
+        <section>
+            <video controls poster="Spot Institucional Supermercado El Súper.jpg" width="640" height="360">
+                <source src="Spot Institucional Supermercado El Súper.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+                <track src="subtitles.vtt" kind="subtitles" srclang="es" label="Español">
+            </video>
+        </section>
+
+        <section>
+            <!-- Nueva Sección de Tarjetas de Producto -->
+             <section class="productos">
+                <h2>Nuestros Productos Destacados</h2>
+                <div class="contenedor-tarjetas">
+                    <!-- Tarjeta 1 -->
+                     <article class="tarjeta-producto">
+                        <img src="leche.jpg" alt="Leche Entera" class="producto-img">
+                        <h3 class="producto-nombre">Leche Entera Larga Vida</h3>
+                        <p class="producto-desc">Leche de vaca clásica enriquecida con vitaminas A y D. Pack de 1 Litro.</p>
+                        <span class="producto-precio">$1.200</span>
+                        <button class="btn-carrito">
+                        <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                        </button>
+                    </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="tarjeta-producto">
+                    <img src="pan.jpg" alt="Pan Lactal" class="producto-img">
+                    <h3 class="producto-nombre">Pan Lactal Artesanal</h3>
+                    <p class="producto-desc">Pan blanco de mesa, súper tierno y sin conservantes. Ideal para tostadas.</p>
+                    <span class="producto-precio">$2.100</span>
+                    <button class="btn-carrito">
+                        <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                    </button>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="tarjeta-producto">
+                    <img src="yerba.png" alt="Yerba Mate" class="producto-img">
+                    <h3 class="producto-nombre">Yerba Mate Premium 1kg</h3>
+                    <p class="producto-desc">Yerba con palo, de molienda equilibrada y estacionamiento natural.</p>
+                    <span class="producto-precio">$3.500</span>
+                    <button class="btn-carrito">
+                        <i class="fas fa-shopping-cart"></i> Agregar al carrito
+                    </button>
+                </article>
+            </div>
+        </section>
+                <!-- Nueva Sección de Reseñas con CSS Grid -->
+        <section class="reseñas">
+            <h2>Lo que dicen nuestros clientes</h2>
+            
+            <!-- Contenedor Padre de la Grilla -->
+            <div class="grid-container">
+                
+                <!-- Tarjeta de Reseña 1 -->
+                <section class="card">
+                    <i class="fas fa-user-circle"></i> <!-- Ícono de usuario de Font Awesome -->
+                    <h3>Mariano Gómez</h3>
+                    <p class="opinion">"Excelente atención y los productos frescos siempre están impecables. El envío llegó rapidísimo."</p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                </section>
+
+                <!-- Tarjeta de Reseña 2 -->
+                <section class="card">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>Florencia Rossi</h3>
+                    <p class="opinion">"Muy buena la página web, súper cómoda para hacer el pedido desde casa. Buenos precios en lácteos."</p>
+                    <div class="estrellas">⭐⭐⭐⭐</div>
+                </section>
+
+                <!-- Tarjeta de Reseña 3 -->
+                <section class="card">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>Carlos Mezza</h3>
+                    <p class="opinion">"Compro todas las semanas. El pan artesanal es rico. Súper recomendados."</p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐</div>
+                </section>
+            </div>
+        </section>
+            <h2>Contacto</h2>
+            <form action="https://formspree.io/f/xojrrjrz" method="POST">
+
+                <div class="grupo-formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="message" rows="4" placeholder="Tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form> 
+        </section>
+    </main>
+ <!-- footer que pide el ejercicio -->
+    <footer>
+        <p>© 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+        <!-- redes sociales -->
+        <div class="redes-sociales">
+            <!-- Enlace a Facebook (podés cambiar el # por el link real de tu página) -->
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook"></i>
+            </a>
+
+            <!-- Enlace a Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <!-- Enlace a WhatsApp -->
+            <a href="https://wa.me/tu-numero-aca" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+    </footer>
+</body>
+</html>
