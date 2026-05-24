@@ -32,7 +32,11 @@
         <p>En esta página encontrarás información sobre nuestros productos y servicios.</p>
 
         <section>
-            <video controls poster="Spot Institucional Supermercado El Súper.jpg" width="640" height="360">
+            <!-- Agregamos la clase 'seccion-video' al contenedor -->
+             <section class="seccion-video">
+                <!-- Le agregamos la clase 'video-responsivo' y le sacamos el width y height fijos para que el tamaño lo maneje de forma inteligente el CSS -->
+                 <video controls poster="Spot Institucional Supermercado El Súper.jpg" class="video-responsivo">
+
                 <source src="Spot Institucional Supermercado El Súper.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
                 <track src="subtitles.vtt" kind="subtitles" srclang="es" label="Español">
@@ -81,10 +85,8 @@
                 <!-- Nueva Sección de Reseñas con CSS Grid -->
         <section class="reseñas">
             <h2>Lo que dicen nuestros clientes</h2>
-            
             <!-- Contenedor Padre de la Grilla -->
             <div class="grid-container">
-                
                 <!-- Tarjeta de Reseña 1 -->
                 <section class="card">
                     <i class="fas fa-user-circle"></i> <!-- Ícono de usuario de Font Awesome -->
@@ -126,6 +128,8 @@
                     <textarea id="mensaje" name="message" rows="4" placeholder="Tu mensaje" required></textarea>
                 </div>
                 <button type="submit" class="btn-enviar">Enviar</button>
+
+                
             </form> 
         </section>
     </main>

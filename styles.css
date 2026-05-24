@@ -3,7 +3,7 @@ body {
     font-family: "Finlandica Text", sans-serif; /* Cambia el tipo de letra */
     margin: 0px; /* Elimina el margen por defecto */
     padding: 10px; /* Agrega un poco de espacio interno */
-    background: linear-gradient(to right, #66ea6d, #43b1b9);/* Degradado de fondo */
+    background: linear-gradient(to right, #e0e6d2, #b8eef1);/* Degradado de fondo */
     color: rgb(15, 0, 0);
     
 }
@@ -21,18 +21,24 @@ font-family: "Intel One Mono", monospace;
 h1, h2, h3 {
     font-family: "Finlandica Text", sans-serif;
     margin: 25px; 
+    text-align: center;
+margin-top: 20px;
+margin-bottom: 30px;
+font-size: 2.5rem;
 }
 
 /* Selector de CLASE */
 .cabecera-principal {
     border-bottom: 5px solid #dd1c1c; /* Línea ROJO abajo */
     margin-bottom: 45px; 
+        text-align: center;
 }
 
 /* Estilo para los títulos */
 h1 {
     font-size: 2.5rem; 
     margin: 10px 0;
+        text-align: center;
 
 }
 
@@ -52,7 +58,7 @@ ul {
 /* Selector de elemento para los enlaces: Quita subrayado y cambia color */
 a {
     text-decoration: none; /* Chau subrayado */
-    color: #1a860c;        /* Un verde  para que combine con tu header */
+    color: #3b8d30;        /* Un verde  para que combine con tu header */
     font-weight: bold;     /* Para que se note que son links */
     padding: 8px 16px;     /* Agregamos el padding  */
 }
@@ -66,6 +72,7 @@ a:hover {
 i {
 font-size: 24px;
 color: #333;
+ 
 }
 
 /* Espacio para el contenedor de las redes sociales */
@@ -101,7 +108,7 @@ color: #333;
 /* Estilo individual de cada Tarjeta (Modelo de Caja Completo) */
 .tarjeta-producto {
     background-color: #ffffff;
-    border: 1px solid #196303; /* Usamos el verde clarito de tu header */
+    border: 1px solid #3f6d31; /* Usamos el verde clarito de tu header */
     border-radius: 8px;        /* Bordes redondeados */
     width: 280px;              /* Ancho fijo para cada tarjeta */
     padding: 15px;             /* Espacio interno para que el texto no toque el borde */
@@ -146,7 +153,7 @@ color: #333;
 
 /* Botón de Agregar al Carrito */
 .btn-carrito {
-    background-color: #23b90f; /* El verde de  links */
+    background-color: #5cd34c; /* El verde de  links */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -297,7 +304,7 @@ color: #333;
 }
 
 .btn-enviar {
-    background-color: #23b90f;
+    background-color: #5cd84b;
     margin-bottom: 25px;
     color: white;
     border: none;
@@ -339,4 +346,153 @@ color: #333;
         padding: 12px 10px;   /* Inputs un poco más altos para que sea fácil meter el dedo */
         margin-bottom: 5px;   /* Margen extra inferior si se requiere */
     }
+}
+
+/* ====================================================
+   SECCIÓN RESEÑAS (CORREGIDO)
+   ==================================================== */
+
+/* 1. La sección exterior ya NO es un grid. Es solo el contenedor blanco de fondo */
+.reseñas {
+    background-color: #f9f9f9; 
+    padding: 40px 20px; 
+    width: 100%;
+    display: block; /* <-- CAMBIO: Volvemos a un bloque normal para liberar al título */
+}
+
+/* 2. Forzamos a que el título ocupe todo el ancho y se centre libremente */
+.reseñas h2 {
+    text-align: center !important;
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* 3. El contenedor PADRE de las tarjetas es el que SÍ activa el Grid */
+.grid-container {
+    display: grid; 
+    /* Crea las columnas de las tarjetas automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+    max-width: 1200px; /* <-- Evita que en la compu se estiren al infinito */
+    margin: 0 auto;    /* <-- Centra el grupo de tarjetas en la pantalla */
+    width: 100%;
+}
+
+/* ====================================================
+   SECCIÓN: VIDEO INSTITUCIONAL CENTRADO Y RESPONSIVO
+   ==================================================== */
+
+/* 1. Centramos el contenedor del video */
+.seccion-video {
+    display: flex;            /* Activamos flexbox */
+    justify-content: center;  /* <-- ESTO centra el video horizontalmente */
+    align-items: center;
+    padding: 40px 20px;       /* Margen interno para que respire */
+    width: 100%;
+}
+
+/* 2. Hacemos que el video se adapte a cualquier pantalla */
+.video-responsivo {
+    width: 100%;              /* En pantallas chicas ocupa todo el ancho */
+    max-width: 640px;         /* <-- En la compu no se deforma, se frena en 640px */
+    height: auto;             /* Mantiene la proporción original para que no se estire feo */
+    border-radius: 8px;       /* Bordes redondeados sutiles para combinar con tus tarjetas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Una sombrita para darle nivel visual */
+}
+
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL
+   ========================================================================== */
+:root {
+  /* Guardamos los colores acá. Si el día de mañana querés cambiar el verde
+     por un azul, lo cambiás acá una sola vez y se actualiza en todo el sitio. */
+  --color-principal: #2a9d8f;
+  --color-oscuro: #264653;
+  --color-claro: #f4f1de;
+  --color-texto: #333333;
+  --fuente-titulos: 'Montserrat', sans-serif;
+  --fuente-cuerpo: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  color: var(--texto);
+  background-color: var(--color-claro);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. CORRECCIÓN DE TÍTULOS (Cambio solicitado)
+   ========================================================================== */
+.titulo-principal {
+  font-family: var(--fuente-titulos);
+  color: var(--color-oscuro);
+  /* -------------------------------------------------------------------- */
+  /* CAMBIO: Agregamos text-align: center para asegurarnos de que el    */
+  /* título principal no quede tirado a la izquierda en la compu.         */
+  /* -------------------------------------------------------------------- */
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+}
+
+/* ==========================================================================
+   3. SECCIÓN PRODUCTOS (Optimización Responsiva)
+   ========================================================================== */
+.contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* -------------------------------------------------------------------- */
+  /* CAMBIO: Para pantallas grandes, le definimos un ancho máximo         */
+  /* (max-width) y margin: auto para que todo el bloque quede centrado    */
+  /* en el monitor. El padding evita que toque los bordes en el celu.      */
+  /* -------------------------------------------------------------------- */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  justify-content: center; /* Centra las tarjetas si sobran espacios */
+}
+
+.tarjeta-producto {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* -------------------------------------------------------------------- */
+  /* CAMBIO: En vez de un ancho fijo en px, usamos flex-basis y calc.     */
+  /* Esto le dice: "Intentá medir un tercio del contenedor menos el gap".  */
+  /* -------------------------------------------------------------------- */
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 280px; /* Evita que se compriman demasiado */
+}
+
+/* ==========================================================================
+   4. MEDIA QUERIES (Adaptación a Dispositivos)
+   ========================================================================== */
+
+/* Celulares grandes y Tablets */
+@media (max-width: 768px) {
+  .tarjeta-producto {
+    /* CAMBIO: En pantallas medianas/chicas, pasan a ocupar la mitad (2 columnas) */
+    flex: 1 1 calc(50% - 20px);
+  }
+  .titulo-principal {
+    font-size: 2rem; /* Achicamos un toque el texto para que entre bien */
+  }
+}
+
+/* Celulares chicos */
+@media (max-width: 480px) {
+  .tarjeta-producto {
+    /* CAMBIO: En celus verticales, cada producto toma el 100% del ancho */
+    flex: 1 1 100%;
+  }
 }
